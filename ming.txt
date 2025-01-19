@@ -1,4 +1,8 @@
 ming
 try new things
 will willS
+<<<<<<< HEAD
 not a way
+=======
+boy
+>>>>>>> feature1
