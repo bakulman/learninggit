@@ -2,7 +2,11 @@ ming
 try new things
 will willS
 <<<<<<< HEAD
+<<<<<<< HEAD
 not a way
 =======
 boy
 >>>>>>> feature1
+=======
+dev is owner
+>>>>>>> dev
