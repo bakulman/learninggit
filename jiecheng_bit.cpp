@@ -3,7 +3,7 @@
     double sum = 0;
     for(int i = 1;i <= 10000000;++i)
     {
-        sum += log10(i);//de2(i,sum);
+        sum += log10(i);//de2(i,sum);//阶乘位数计算,用log函数转换
         v[i] = sum;
     }//cout << sum;
 
