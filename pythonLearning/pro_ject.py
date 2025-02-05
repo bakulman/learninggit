@@ -143,7 +143,7 @@ random.seed(datetime.datetime.now())
 def getInternalLinks(bsObj, includeUrl):
     internalLinks = []
     #找出所有以"/"开头的链接
-    for link in bsObj.findAll("a", href=re.compile("^(/|.*"+includeUrl+")"))
+    for link in bsObj.findAll("a", href=re.compile("^(/|.*"+includeUrl+")")):
         if link.attrs['href'] not in internalLinks:
             internalLinks.append(link.attrs['href'])
     return internalLinks
