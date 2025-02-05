@@ -13,7 +13,7 @@ ll power(ll a, ll b, ll p)
             ans = (ans * a) % p;
         }
         a = (a * a) % p; // 自己乘自己,次幂
-        b >> 1;//忘了
+        b << 1;//忘了
     }
     return ans; // ll防止爆炸
 }

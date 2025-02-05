@@ -180,25 +180,7 @@ inline ll mod(ll a,ll b)
 //
 //     }
 // }
-
-
-vector<int> dp(1000,-1);
-
-int dfs(int i,vector<int> &mem)
-{
-    if(i == 1 || i == 2)
-        return i;
-
-    if(mem[i]!= -1)
-    {
-        return mem[i];
-    }
-    dp[i] = dp[i-1] + dp[i-1];
-    int count = dfs(i -1,mem) + dfs(i-2,mem);
-    mem[i] = count;
-    return count;
-
-}
+ 
 
 
 int main()
@@ -209,18 +191,41 @@ int main()
 
 
 
-
-    int n;
-    cin >> n;
-    int x = 99 ;
-    string out;
-    stringstream ss;
-    ss << std::hex <<x;
-    ss >> out ;
-    transform(out.begin(), out.end(), out.begin(), ::toupper);
-    cout << out <<endl;
-
-
+    int n,k;
+    cin >> n >> k;
+    ll cnt = 0;
+    while (n--)
+    {
+        /* code */
+        string s;
+        cin >> s;
+        bool flsg = true;
+        for(auto c : s)
+        {
+            if(isdigit(c))
+            {
+                if(c- '0' >= k || c - '0' < 0)
+                {
+                    flsg = false;
+                    break;
+                }
+            }
+            else 
+            {
+                if (c - '0' + 10 >= k || c - '0' + 10 < 0)
+                {
+                    flsg = false;
+                
+            break;}
+            }
+        }
+        if(flsg)
+            {
+                cnt++;
+            }
+    }
+    cout << cnt;
+    
 
 
 
